@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Consolas;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Using Print in Python\
+\
+\ul Easy stuff first: Printing an appended string variable.\
+\ulnone \
+\
+
+\f1 my_name = "Jenee"\
+print "Hi, my name is " + my_name
+\f0 \
+\
+This prints "Hi, my name is Jenee" plus a newline character at the end, putting it on its own line\
+\
+If you don't want it on its own line:\
+\
+
+\f1 print "Hi, my name is", my_name \
+
+\f0 \
+This prints "Hi, my name is Jenee", but doesn't print a newline character. Notice the lack of space between "is" and the closing quotation mark, and the comma after the closing quotation mark.  \
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul \ulc0 Because everyone loves verbosity! Printing an appended number variable.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ulnone \
+Now, I want to say my age!\
+\
+BUT! I have to turn the number into a string first, if I using the + syntax, like this:\
+\
+
+\f1 my_age = 26\
+print "I am "+ str(my_age) + " years old" \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+Gah, that's annoying. I don't want to have to type str() around any non-string thing I want to print. \
+\
+Let's try a new approach!\
+\
+\ul Using Fancier Output Formatting\
+(Thanks to {\field{\*\fldinst{HYPERLINK "http://www.network-theory.co.uk/docs/pytut/FancierOutputFormatting.html"}}{\fldrslt http://www.network-theory.co.uk/docs/pytut/FancierOutputFormatting.html}})\
+\ulnone \
+Let's replicate what we had thus far. We want the output to look like this:\
+\
+
+\f2 Hello, my name is Jenee! I am 26 years old.
+\f0 \
+\
+So, let's be fancy!\
+\
+
+\f1 my_name = "Jenee"\
+my_age = 26\
+print "Hello, my name is %s! I am %d years old" % (my_name, my_age)\
+
+\f0 \
+Wow! Look at how nice and clean that is! \
+\
+It would've looked like this using the other syntax:\
+
+\f1 print "Hello, my name is "+my_name+"! I am "+str( my_age)+" years old"
+\f0 \
+\
+\'85which, let's face it, is kind of ugly.\
+\
+\
+blah blah blah
+\f1 \
+
+\f0 blah blah blah
+\f1 \
+
+\f0 blah blah blah
+\f1 \
+
+\f0 blah blah blah
+\f1 \
+
+\f0 blah blah blah
+\f1 \
+
+\f0 blah blah blah
+\f1 \
+}

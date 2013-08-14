@@ -1,0 +1,294 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPS-BoldMT;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 CourierNewPS-BoldItalicMT;\f5\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red229\green239\blue243;\red45\green111\blue187;
+\red246\green246\blue246;}
+\margl1440\margr1440\vieww14720\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 \ul \ulc0 Dead Simple 
+\f1 git
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Cookbook command sequence:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2\b0 \cf0 	$ git init\
+	$ git add *\
+	$ git commit
+\f0 \
+(with
+\f2  $ git status 
+\f0 between each step) \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Simple Step-by-Step:
+\b0 \
+\
+STEP 1:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 git init    \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+
+\f0\b0 \cf0 	Makes a .git folder in the folder that you're currently in, which initiatizes an empty git repository for the folder you're in and all its subfolders\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+STEP 2:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 git status \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	shows you what files that git is not tracking in the current folder and its subfolders\
+\
+STEP 3:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 git add  *\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf0 	add all untracked files in the current folder and in all subfolders to the repository\
+\
+ALTERNATIVE STEP 3:  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 git add <filenames>\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf0 	add only the files listed to the repository\
+\
+STEP 4 (SEMI-OPTIONAL, DOUBLE-CHECKING STEP):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 git status \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	shows you what files that git is going to commit upon next commit (should be everything you want to add).  These files are referred to as "staged".\
+\
+STEP 5:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 git commit -m "Some sort of log message here, explaining what's in the commit. This will show up in the log"\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf0 	This will commit all the "staged" files to be version controlled.\
+\
+\
+STEP 6 (SEMI-OPTIONAL, DOUBLE-CHECKING STEP):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 git status \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	Should show that no "staged" files are left, and that you're "On branch master"\
+\
+STEP 7 (SEMI-OPTIONAL, DOUBLE-CHECKING STEP):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 git log	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf0 	See your log message that you set in step five!  \
+\
+\
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \ul SHINY EXTRAS:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 \ulnone \
+How to make it so it doesn't automatically commit *.class files:\
+(1) Make a .gitignore file\
+(2) Put *.class inside of it.\
+(It takes one pattern on each line, and all patterns are shell patterns)\
+(3) Save it! :D\
+(4) add the .gitignore file to tracking (so it'll follow you around everywhere):  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 	
+\f1\b git add .gitignore
+\f0\b0 \
+\
+\
+If you have to un-add things:\
+#   (use "git reset HEAD <file>..." to unstage)\
+(or upon initial commit, to remove things: )\
+#   (use "git rm --cached <file>..." to unstage)\
+\
+\
+\
+If you want to see the log files with your commit messages AND what files were committed:\
+	
+\f2 git log --name-only
+\f0  \
+\
+\
+if you want to visually diff your current code to your last commit using a GUI:\
+	
+\f2 git difftool
+\f0  \
+\
+If you want to easily stage all the 
+\b deleted files
+\b0  in your current directory from git, use:\
+	
+\f2 git add -u . 
+\f0  \
+\
+If you want create a branch and switch to it, use: \
+	
+\f2 git checkout -b <branch_name> 
+\f0  \
+\
+If you want list all local branches: \
+	
+\f2 git branch
+\f0  \
+\
+If you want to switch branches, use: \
+	
+\f2 git checkout <branch_name> 
+\f0  \
+\
+If you want to FORCEFULLY switch branches, use: \
+	
+\f2 git checkout <branch_name> -f
+\f0  \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \ul GITHUB SETUP:  \
+\
+\pard\pardeftab720\sl360
+\cf2 \cb3 \ulnone Global setup:\
+\pard\pardeftab720
+
+\f3\b0 \cf2  {\field{\*\fldinst{HYPERLINK "http://help.github.com/set-up-git-redirect"}}{\fldrslt \cf4 Set up git}}\
+  git config --global user.name "Your Name"\
+  git config --global user.email jenee.hughes@gmail.com\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b \cf0 \cb1 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 \ulnone If have an existing local repository, and an existing-but-brand-new repository created on github, and you want to push code from your local repo to your new git repo.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 	cd 
+\f4\i\b <existing_local_git_repo
+\f1\i0 >
+\f2\b0 \
+ 	git remote add origin git@github.com:
+\f1\b <
+\f4\i github_username
+\f1\i0 >
+\f2\b0 /
+\f1\b <
+\f4\i existing_github_repository_name
+\f1\i0 >
+\f2\b0 .git\
+  	git push -u origin master\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2300\fi120\pardirnatural
+\cf0   Actual example:	\
+	cd 
+\f4\i\b localThesisFolder
+\f2\i0\b0 \
+ 	git remote add origin git@github.com:
+\f4\i\b jenee
+\f2\i0\b0 /
+\f4\i\b Thesis
+\f2\i0\b0 .git\
+  	git push -u origin master
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	Update as of 2012-09-24: line 2 is now: (This uses HTTPS instead of SSH)\
+\pard\pardeftab720\sl380
+
+\f5 \cf2 \cb5 		git remote add origin https://github.com/
+\f1\b \cf0 \cb1 <
+\f4\i github_username
+\f1\i0 >
+\f2\b0 /
+\f1\b <
+\f4\i existing_github_repository_name
+\f1\i0 >
+\f2\b0 .git
+\f5 \cf2 \cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \cb1 \
+\
+If you want to push an existing repository's contents to its github equivalent (assuming you already have an account and configured it correctly):\
+	
+\f2 git push
+\f0   \
+\
+\
+If you want to push a new repository to github (assuming you already have an account and configured it correctly):\
+	
+\f2 ??????
+\f0 \
+\
+\
+If you want to make your github repository into a webpage: {\field{\*\fldinst{HYPERLINK "https://help.github.com/articles/creating-project-pages-manually"}}{\fldrslt https://help.github.com/articles/creating-project-pages-manually}}\
+	(1) make a branch in your project called "gh-pages"\
+		
+\f2 git checkout -b gh-pages\
+	
+\f0 (2) push that branch to github\
+		
+\f2 git push origin gh-pages
+\f0 \
+\
+\
+FAQ: \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \ul Q: 
+\b0 \ulnone  My commit messages fail and give ugly errors when I put exclamation points in them!   I  can't accurately express my frustration/joy without exclamations points!  Why is this happening to me, and how can I fix it so I can use exclamation points in my commit messages?\
+\
+
+\b \ul A:
+\b0 \ulnone   First, A few questions for you:  \
+	1)  Does your commit command look like this:  \
+		
+\f2 git commit -m "OMG IT WORKS!!!"
+\f1\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf0 	2) Do you get the following error:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 		-bash: !": event not found\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	\
+	If you answered yes to both of these questions, I can solve your problem!  \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Why it's doing this:  \ulnone \
+	The command shell or terminal that you're using to try to talk to git is recognizing the '!' character as a message
+\b  for it
+\b0  to do something before trying to run the command.  It tries to interpret what the '!' means it should do, before it passes on the rest of the command to git.  When it can't understand why you put a '!' in there, it gets unhappy, spits out this error, and spitefully decides not to give git your command.\
+\
+\ul How you can fix it:\ulnone \
+	Option 1)  Use single quotes instead of double quotes!  \
+	Option 2)  Type the command "git commit"  WITHOUT the -m "blahblah!" part. \
+			This takes you to a text editor.  Type your commit message at the top of the file.\
+			Make it as long as you want!  When you're done, close and save your file.  \
+			Wha-la!  As many special characters as you want! :D\
+\
+\
+Resources: {\field{\*\fldinst{HYPERLINK "http://jonas.nitro.dk/git/quick-reference.html"}}{\fldrslt http://jonas.nitro.dk/git/quick-reference.html}}}

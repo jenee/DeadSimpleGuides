@@ -1,0 +1,63 @@
+Dead Simple Guide to making new colors with OpenGL material structs
+
+Problem: you have a simple RGB value for a color. Open GL wants you to split that into three different sets of RGB values: one for ambient lighting, one for diffuse, and one for specular.
+
+QUICK REF Solution:
+
+There are three RGB facets
+   diffuseRGB = origRGB / 255.0
+   specularRGB = diffuseRGB / 2.0 
+           or, = ( origRGB / 2.0 ) / 255.0 
+   ambientRGB = specularRGB / 2.0
+           or, = ( origRGB / 4.0 ) / 255.0 
+
+LONG REF solution:
+
+To clarify,we're talking about this sort of material struct:
+typedef struct materialStruct {
+   GLfloat ambient[4];
+   GLfloat diffuse[4];
+   GLfloat specular[4];
+   GLfloat shininess[1];
+} materialStruct;
+
+
+start with the RGB value for a color:
+
+For example, this lovely shade of green:
+
+Bright green rgb val = 142 255 0
+
+SO:
+
+double colorR = 142.0;
+double colorG = 255.0;
+double colorB = 0.0;
+
+
+Now, set the diffuse rgb values to those values divided by 255 (the max RGB val possible)
+
+double diffuseR = colorR / 255.0;
+double diffuseG = colorG / 255.0;
+double diffuseB = colorB / 255.0;
+
+Now, set the specular RGBs to be half of the diffuse:
+
+double specularR = diffuseR / 2.0;
+double specularG = diffuseG / 2.0;
+double specularB = diffuseB / 2.0;
+
+Now set the ambient to be half of the specular
+
+double ambientR = specularR / 2.0;
+double ambientG = specularG / 2.0;
+double ambientB = specularB / 2.0;
+
+Now, to make our final color!
+
+materialStruct yourNewGreenMaterial = {
+{ ambientR, ambientG, ambientB, 1.0 },
+{ diffuseR, diffuseG, diffuseB, 1.0 },
+{ specularR, specularG, specularB, 1.0 },
+{  1.0 }
+};

@@ -1,0 +1,42 @@
+dead simple vim tricks
+
+
+ESC: Go into command mode
+
+lower-case i: go into insert mode
+
+Insert Mode Tricks:
+
+
+Autocomplete (for existing variable names):  
+	CTRL-N after you've started typing something, to pull up a dropdown of possible autocompletions
+	Up Arrow or CTRL-P to navigate UP dropdown list *
+	Down Arrow or CTRL- N to navigate DOWN dropdown list *
+	Continue typing ANY CHARACTER to accept selected autocompletion in dropdown:  It'll insert the selected autocompletion before whatever character you typed. I tend to prefer to type SPACE to get the dropdown out of my way.
+	Extra, edge-case info: You can also press delete or backspace on an auto-completed term while the dropdown is still up, to broaden your search. 
+
+* CTRL-P and Up Arrow aren't *exactly* analogous, nor are CTRL-N and Down arrow. CTRL-N and CTRL-P substitute the autocompletion in-line as they navigate through the dropdown selections.  The arrow keys change the selected string on the dropdown menu, but do not substitute the selections in-line until the autocompletion is done.  
+
+Command Mode Tricks:
+
+Undo
+	u (lower case)
+Redo
+	CTRL-r (lower case) 
+
+Show/Hide Line Numbers
+Show line numbers --- > :set nu  or :set number   
+
+hides line number --- > :set nonumber
+
+toggle line number on/off ---> set nu! OR :set number! OR :set nonumber!
+
+
+Show/Hide Non-printable characters
+
+shows non-printable characters:   :set list
+
+hide non-printable characters  :set nolist
+
+Toggle on/off  :set list!
+

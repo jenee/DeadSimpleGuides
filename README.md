@@ -1,4 +1,5 @@
 Technical people like overexplaining things they like:
+
    "OMG you should use git version control! It has this really cool optimization for--"
 
 Yeah, that's cool. But *how does one start using it*?

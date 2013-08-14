@@ -72,6 +72,34 @@ It would've looked like this using the other syntax:\
 \'85which, let's face it, is kind of ugly.\
 \
 \
+\ul But I want to print my object data in my special format without having to do the formatting stuff every time!\
+\ulnone  Of course you do.\
+\
+Good news, is, you can! Override __repr__() in your class! \
+(example stolen from Codecademy here: {\field{\*\fldinst{HYPERLINK "http://www.codecademy.com/courses/python-intermediate-en-egNXj/1/5?curriculum_id=4f89dab3d788890003000096"}}{\fldrslt http://www.codecademy.com/courses/python-intermediate-en-egNXj/1/5?curriculum_id=4f89dab3d788890003000096}})\
+\
+
+\f1 class Point3D(object):\
+    def __init__(self, x, y, z):\
+        self.x = x\
+        self.y = y\
+        self.z = z\
+    def __repr__(self):\
+        return "(%d, %d, %d)" %(self.x, self.y, self.z)\
+    \
+my_point = Point3D(1,2,3)\
+\
+print my_point
+\f0 \
+\
+That last print statement will print this: \
+\
+
+\f2 (1, 2, 3)
+\f0 \
+\
+Isn't that nifty? SO NIFTY!\
+\
 blah blah blah
 \f1 \
 

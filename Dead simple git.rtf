@@ -198,7 +198,7 @@ If you want to FORCEFULLY switch branches, use: \
 \f4\i existing_github_repository_name
 \f1\i0 >
 \f2\b0 .git\
-  	git push -u origin master\
+  	s\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2300\fi120\pardirnatural
 \cf0   Actual example:	\
 	cd 
@@ -228,7 +228,15 @@ If you want to FORCEFULLY switch branches, use: \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0 \cf0 \cb1 \
-\
+If you made a README.md on github for an existing local repository, and now it's not letting you push because the stuff isn't synced:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	
+\f2 git pull -u origin master
+\f0 \
+\pard\pardeftab720\sl340
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
 If you want to push an existing repository's contents to its github equivalent (assuming you already have an account and configured it correctly):\
 	
 \f2 git push
